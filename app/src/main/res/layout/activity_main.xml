@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/MemeimageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Nextmeme"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        app:layout_constraintBottom_toBottomOf="@+id/MemeimageView"
+        app:layout_constraintEnd_toEndOf="@+id/MemeimageView"
+        app:layout_constraintStart_toStartOf="@+id/MemeimageView"
+        app:layout_constraintTop_toTopOf="@+id/MemeimageView"
+
+        />
+
+    <Button
+        android:id="@+id/shareMeme"
+        android:layout_width="133dp"
+        android:layout_height="88dp"
+        android:onClick="shareMeme"
+        android:padding="30dp"
+        android:text="@string/share"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MemeimageView" />
+
+    <Button
+        android:id="@+id/Nextmeme"
+        android:layout_width="136dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="nextMeme"
+        android:padding="30dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
